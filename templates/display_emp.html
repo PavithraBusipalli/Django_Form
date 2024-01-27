@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Employee</title>
+</head>
+<body>
+    <center>
+        <table border="2px">
+            <caption>Employee</caption>
+            <tr>
+                <th>EMP Id</th>
+                <th>EName</th>
+                <th>SAL</th>
+                <th>DEPTNO</th>
+                {% for do in emps %}
+                <tr>
+                    <td>{{do.empid}}</td>
+                    <td>{{do.ename}}</td>
+                    <td>{{do.esal}}</td>
+                    <td>{{do.edeptno}}</td>
+                </tr>
+                {% endfor %}
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
